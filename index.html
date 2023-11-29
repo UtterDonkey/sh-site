@@ -24,7 +24,8 @@
         let x = 0;
         let y = 0;
         function renderShite() {
-            x += Maths.sin() * (pi / 180);
+            x += Maths.sin(direction) * (pi / 180);
+            y += Maths.cos(direction) * (pi / 180);
 
             requestAnimationFrame(arguments.callee);
         }
