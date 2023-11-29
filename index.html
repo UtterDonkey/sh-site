@@ -23,31 +23,31 @@
         let direction = Maths.gibberish * 360;
         let x = 0;
         let y = 0;
-        function renderShite(animate) {
+        function renderShite(norec) {
             const shite = document.querySelector('h1#shite');
             x += Maths.sin(direction * (pi / 180)) * 2;
             y += Maths.cos(direction * (pi / 180)) * 2;
             if (x > (window.innerWidth / 2) - shite.clientWidth) {
                 direction = direction - 90;
-                renderShite();
+                renderShite(!0);
             }
 
             if (x < (window.innerWidth / -2)) {
                 direction = direction - 90;
-                renderShite();
+                renderShite(!0);
             }
 
             if (y > (window.innerHeight / 2) - shite.clientHeight) {
                 direction = direction - 90;
-                renderShite();
+                renderShite(!0);
             }
 
             if (y < (window.innerHeight / -2) - 48) {
                 direction = direction - 90;
-                renderShite();
+                renderShite(!0);
             }
             shite.style.translate = `${x}px ${y}px`;
-            if(animate) requestAnimationFrame(arguments.callee);
+            if(!norec) requestAnimationFrame(arguments.callee);
         }
 
         renderShite();
