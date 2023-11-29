@@ -47,8 +47,8 @@
                 y += Maths.cos(direction * (pi / 180)) * speed / ((parseFloat(getComputedStyle(shite).scale) - 1) * 2);
             }
             if (mousedown) {
-                x = mouse.clientX;
-                y = mouse.clientY;
+                x = mouse.clientX - (window.innerWidth / 2);
+                y = mouse.clientY - (window.innerWidth / 2);
             } else {
                 move();
             }
