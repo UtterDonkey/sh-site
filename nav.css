@@ -10,7 +10,7 @@ div#nav {
     display: flex;
     align-items: center;
     padding-left: 1rem;
-    animation: slideIn 1.5s ease forwards;
+    animation: slideIn 0.5s ease forwards;
 }
 
 div.nav-button {
