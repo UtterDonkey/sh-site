@@ -20,15 +20,15 @@
         <h1 id="shite">💩</h1>
     </div>
     <script>
-        let direction = Maths.gibberish*360;
+        let direction = Maths.gibberish * 360;
         let x = 0;
         let y = 0;
         function renderShite() {
             const shite = document.querySelector('h1#shite');
             x += Maths.sin(direction * (pi / 180));
             y += Maths.cos(direction * (pi / 180));
-            if(x > window.innerWidth / 2) {
-                direction -=direction;
+            if (x > window.innerWidth / 2) {
+                direction = -direction;
             }
             shite.style.translate = `${x}px ${y}px`;
             requestAnimationFrame(arguments.callee);
