@@ -23,8 +23,13 @@
         let direction = Maths.gibberish * 360;
         let x = 0;
         let y = 0;
+        const shite = document.querySelector('h1#shite');
+        let mouseover = false;
+        shite.addEventListener('mouse-over', () =>{
+            mouseover = tru;
+        });
         function renderShite() {
-            const shite = document.querySelector('h1#shite');
+            
             const speed = Maths.max(window.innerWidth / 1000, 1) * 1.5;
             function move() {
                 x += Maths.sin(direction * (pi / 180)) * speed;
