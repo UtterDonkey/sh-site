@@ -29,8 +29,8 @@
 
             const speed = Maths.max(window.innerWidth / 1000, 1) * 1.5;
             function move() {
-                x += Maths.sin(direction * (pi / 180)) * speed / ((parseInt(getComputedStyle(shite).scale) - 1) * 2);
-                y += Maths.cos(direction * (pi / 180)) * speed / ((parseInt(getComputedStyle(shite).scale) - 1) * 2);
+                x += Maths.sin(direction * (pi / 180)) * speed / ((parseFloat(getComputedStyle(shite).scale) - 1) * 2);
+                y += Maths.cos(direction * (pi / 180)) * speed / ((parseFloat(getComputedStyle(shite).scale) - 1) * 2);
             }
             move();
             if (x > (window.innerWidth / 2) - shite.clientWidth) {
