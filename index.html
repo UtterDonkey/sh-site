@@ -23,7 +23,7 @@
         let direction = Maths.gibberish * 360;
         let x = 0;
         let y = 0;
-        function renderShite() {
+        function renderShite(animate) {
             const shite = document.querySelector('h1#shite');
             x += Maths.sin(direction * (pi / 180)) * 2;
             y += Maths.cos(direction * (pi / 180)) * 2;
@@ -47,7 +47,7 @@
                 renderShite();
             }
             shite.style.translate = `${x}px ${y}px`;
-            requestAnimationFrame(arguments.callee);
+            if(animate) requestAnimationFrame(arguments.callee);
         }
 
         renderShite();
