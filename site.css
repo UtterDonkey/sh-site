@@ -17,5 +17,5 @@ iframe#nav-object {
 }
 
 iframe#nav-object.loaded {
-    display: block;
+    content-visibility: visible;
 }
