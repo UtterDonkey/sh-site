@@ -27,3 +27,7 @@ div.nav-button {
 div.nav-button:hover {
     backdrop-filter: brightness(0.8);
 }
+
+div.nav-button:active {
+    backdrop-filter: brightness(0.6);
+}
