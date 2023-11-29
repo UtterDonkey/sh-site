@@ -1,7 +1,0 @@
-div#nav {
-    height: 48px;
-    width: -webkit-fill-available;
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
-}

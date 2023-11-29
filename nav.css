@@ -2,3 +2,11 @@ body {
     font-family: sans-serif;
     margin: 0;
 }
+
+div#nav {
+    height: 48px;
+    width: calc(100% - 1rem);
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
