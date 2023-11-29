@@ -27,6 +27,9 @@
             const shite = document.querySelector('h1#shite');
             x += Maths.sin(direction * (pi / 180));
             y += Maths.cos(direction * (pi / 180));
+            if(x > window.innerWidth / 2) {
+                direction -=direction;
+            }
             shite.style.translate = `${x}px ${y}px`;
             requestAnimationFrame(arguments.callee);
         }
