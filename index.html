@@ -18,18 +18,7 @@
         <h1 id="shite">💩</h1>
     </div>
     <script>
-        function randomShite(){
-            const shite = document.querySelector('h1#shite');
-            const maxX = window.innerWidth - shite.clientWidth;
-            const maxY = window.innerHeight - shite.clientHeight;
-            const randX = Math.random()*maxX + shite.clientWidth/2;
-            const randY = Math.random()*maxY + shite.clientHeight/2;
-            Object.assign(shite.style, {
-                translate: `${randX}px ${randY}px`
-            });
-        }
 
-        setInterval(randomShite, 2000);
         </script>
 </body>
 
