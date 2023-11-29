@@ -9,14 +9,37 @@
 
 <script>
     const audio = new Audio('ambient.mp3')
-    function play() {
-        audio.play();
-        audio.onended = () => {
-            play();
-        }
-        audio.onerror = () => {
+    async function play() {
+        try {
+            audio.onplay = () => {
+
+                if (sessionStorage.getItem('ambient')) {
+                    audio.currentTime = parseFloat(sessionStorage.getItem('ambient'));
+                } else {
+                    audio.currentTime = 54;
+                }
+
+            }
+            await audio.play();
+            audio.onended = () => {
+                play();
+            }
+            audio.onerror = () => {
+                setTimeout(play, 2000);
+            }
+
+
+
+
+            setInterval(() => {
+                sessionStorage.setItem('ambient', audio.currentTime);
+                if (parent.document.querySelector('h1#shite')) audio.playbackRate = (1 + 1 / (parseFloat(getComputedStyle(parent.document.querySelector('h1#shite')).scale) / 1.5))/2;
+            });
+        } catch (e) {
             setTimeout(play, 2000);
         }
     }
     play();
+
+
 </script>
