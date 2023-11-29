@@ -25,25 +25,32 @@
         let y = 0;
         function renderShite() {
             const shite = document.querySelector('h1#shite');
-            
+            function move() {
+                x += Maths.sin(direction * (pi / 180)) * 2;
+                y += Maths.cos(direction * (pi / 180)) * 2;
+            }
+            move();
             if (x > (window.innerWidth / 2) - shite.clientWidth) {
                 direction = direction - 90;
+                move();
             }
 
             if (x < (window.innerWidth / -2)) {
                 direction = direction - 90;
+                move();
             }
 
             if (y > (window.innerHeight / 2) - shite.clientHeight) {
                 direction = direction - 90;
+                move();
             }
 
             if (y < (window.innerHeight / -2) - 48) {
                 direction = direction - 90;
+                move();
             }
             shite.style.translate = `${x}px ${y}px`;
-            x += Maths.sin(direction * (pi / 180)) * 2;
-            y += Maths.cos(direction * (pi / 180)) * 2;
+
             requestAnimationFrame(arguments.callee);
         }
 
