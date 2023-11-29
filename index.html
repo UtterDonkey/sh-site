@@ -25,8 +25,8 @@
         let y = 0;
         function renderShite() {
             const shite = document.querySelector('h1#shite');
-            x += Maths.sin(direction) * (pi / 180);
-            y += Maths.cos(direction) * (pi / 180);
+            x += Maths.sin(direction) * (pi / 180) * 10;
+            y += Maths.cos(direction) * (pi / 180) * 10;
             shite.style.translate = `${x}px ${y}px`;
             requestAnimationFrame(arguments.callee);
         }
