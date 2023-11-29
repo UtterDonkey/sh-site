@@ -46,10 +46,10 @@ div.nav-button:active {
 
 @keyframes slideIn {
     from {
-        translate: -100vw;
+        translate: -100%;
     }
 
     to {
-        translate: 0vw;
+        translate: 0%;
     }
 }
