@@ -8,8 +8,9 @@ h1#shite {
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
+    transition: scale 1s ease;
 }
 
 h1#shite:hover {
-
+    scale: 3;
 }
