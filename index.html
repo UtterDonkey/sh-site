@@ -35,11 +35,11 @@
                 direction = direction - 90;
             }
 
-            if (y > (window.innerHeight / 2)) {
+            if (y > (window.innerHeight / 2) - 48) {
                 direction = direction - 90;
             }
 
-            if (y < (window.innerHeight / -2)) {
+            if (y < (window.innerHeight / -2) - shite.clientHeight) {
                 direction = direction - 90;
             }
             shite.style.translate = `${x}px ${y}px`;
