@@ -3,6 +3,10 @@ body {
     margin: 0;
 }
 
+div#main-content {
+    margin: 1rem;
+}
+
 @media (prefers-color-scheme: dark) {
     * {
         color-scheme: dark;
