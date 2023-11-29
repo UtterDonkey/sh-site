@@ -27,6 +27,9 @@
         const shite = document.querySelector('h1#shite');
         shite.addEventListener('mousedown', () =>{
             mousedown = true;
+        });
+        document.body.addEventListener('mouseup', () =>{
+            mousedown = false;
         })
         function renderShite() {
 
