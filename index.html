@@ -24,19 +24,12 @@
         let x = 0;
         let y = 0;
         const shite = document.querySelector('h1#shite');
-        let mouseover = false;
-        shite.addEventListener('mouseover', () => {
-            mouseover = true;
-        });
 
-        shite.addEventListener('mouseout', () => {
-            mouseover = false;
-        });
         function renderShite() {
 
             const speed = Maths.max(window.innerWidth / 1000, 1) * 1.5;
             function move() {
-                x += Maths.sin(direction * (pi / 180)) * speed / (mouseover ? 5 : 1);
+                x += Maths.sin(direction * (pi / 180)) * speed / (parseInt(getComputedStyle(shite).scale)-0.5);
                 y += Maths.cos(direction * (pi / 180)) * speed / (mouseover ? 5 : 1);
             }
             move();
