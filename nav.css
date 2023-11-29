@@ -11,3 +11,9 @@ div#nav {
     align-items: center;
     padding-left: 1rem;
 }
+
+div.nav-button {
+    color: white;
+    height: 100%;
+    padding: 1rem;
+}
