@@ -29,18 +29,22 @@
             y += Maths.cos(direction * (pi / 180)) * 2;
             if (x > (window.innerWidth / 2) - shite.clientWidth) {
                 direction = direction - 90;
+                renderShite();
             }
 
             if (x < (window.innerWidth / -2)) {
                 direction = direction - 90;
+                renderShite();
             }
 
             if (y > (window.innerHeight / 2) - shite.clientHeight) {
                 direction = direction - 90;
+                renderShite();
             }
 
-            if (y < (window.innerHeight / -2)) {
+            if (y < (window.innerHeight / -2) - 48) {
                 direction = direction - 90;
+                renderShite();
             }
             shite.style.translate = `${x}px ${y}px`;
             requestAnimationFrame(arguments.callee);
