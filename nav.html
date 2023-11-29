@@ -6,3 +6,17 @@
 <script>
     parent.document.querySelector('iframe#nav-object').classList.add('loaded');
 </script>
+
+<script>
+    const audio = new Audio('ambient.mp3')
+    function play() {
+        audio.play();
+        audio.onended = () => {
+            play();
+        }
+        audio.onerror = () => {
+            setTimeout(play, 2000);
+        }
+    }
+    play();
+</script>
