@@ -25,15 +25,19 @@
         let y = 0;
         const shite = document.querySelector('h1#shite');
         let mouseover = false;
-        shite.addEventListener('mouse-over', () =>{
-            mouseover = tru;
+        shite.addEventListener('mouseover', () => {
+            mouseover = true;
+        });
+
+        shite.addEventListener('mouseout', () => {
+            mouseover = false;
         });
         function renderShite() {
-            
+
             const speed = Maths.max(window.innerWidth / 1000, 1) * 1.5;
             function move() {
-                x += Maths.sin(direction * (pi / 180)) * speed;
-                y += Maths.cos(direction * (pi / 180)) * speed;
+                x += Maths.sin(direction * (pi / 180)) * speed / mouseover ? 1 : 5;
+                y += Maths.cos(direction * (pi / 180)) * speed / mouseover ? 1 : 5;
             }
             move();
             if (x > (window.innerWidth / 2) - shite.clientWidth) {
