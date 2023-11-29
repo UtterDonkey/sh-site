@@ -1,4 +1,5 @@
 h1#shite {
+    transition: scale 1s ease;
     position: fixed;
     left: 50%;
     top: 50%;
@@ -8,7 +9,7 @@ h1#shite {
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
-    transition: scale 1s ease;
+
 }
 
 h1#shite:hover {
