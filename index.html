@@ -28,7 +28,7 @@
             x += Maths.sin(direction * (pi / 180));
             y += Maths.cos(direction * (pi / 180));
             if (x > window.innerWidth / 2) {
-                direction = -direction;
+                direction = direction-90;
             }
             shite.style.translate = `${x}px ${y}px`;
             requestAnimationFrame(arguments.callee);
