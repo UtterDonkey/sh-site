@@ -58,22 +58,22 @@
             }
 
             if (x > (window.innerWidth / 2) - shite.clientWidth) {
-                direction = direction - 90;
+                direction = 360-direction;
                 move();
             }
 
             if (x < (window.innerWidth / -2)) {
-                direction = direction - 90;
+                direction = 360-direction;
                 move();
             }
 
             if (y > (window.innerHeight / 2) - shite.clientHeight) {
-                direction = direction - 90;
+                direction = 180-direction;
                 move();
             }
 
             if (y < (window.innerHeight / -2) + 48) {
-                direction = direction - 90;
+                direction = 180-direction;
                 move();
             }
             shite.style.translate = `${x}px ${y}px`;
