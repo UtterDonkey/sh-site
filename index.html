@@ -34,7 +34,7 @@
         shite.addEventListener('mousedown', (e) => {
             mousedown = true;
             mouse.originX = e.clientX - (x + (window.innerWidth / 2));
-            mouse.originY = e.clientY; - (y + (window.innerHeight / 2))
+            mouse.originY = e.clientY - (y + (window.innerHeight / 2));
         });
         document.body.addEventListener('mouseup', () => {
             mousedown = false;
