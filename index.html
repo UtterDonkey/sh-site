@@ -25,7 +25,7 @@
         let y = 0;
         function renderShite() {
             const shite = document.querySelector('h1#shite');
-            const speed = Maths.max(window.innerWidth / 1000, 1) * 2;
+            const speed = Maths.max(window.innerWidth / 1000, 1) * 1.5;
             function move() {
                 x += Maths.sin(direction * (pi / 180)) * speed;
                 y += Maths.cos(direction * (pi / 180)) * speed;
