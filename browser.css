@@ -1,0 +1,4 @@
+iframe#browser {
+    width: 60vw;
+    aspect-ratio: 16/9;
+}
