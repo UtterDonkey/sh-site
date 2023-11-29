@@ -36,8 +36,8 @@
 
             const speed = Maths.max(window.innerWidth / 1000, 1) * 1.5;
             function move() {
-                x += Maths.sin(direction * (pi / 180)) * speed / mouseover ? 1 : 15;
-                y += Maths.cos(direction * (pi / 180)) * speed / mouseover ? 1 : 15;
+                x += Maths.sin(direction * (pi / 180)) * speed / mouseover ? 15 : 1;
+                y += Maths.cos(direction * (pi / 180)) * speed / mouseover ? 15 : 1;
             }
             move();
             if (x > (window.innerWidth / 2) - shite.clientWidth) {
