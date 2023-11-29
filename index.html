@@ -25,9 +25,10 @@
         let y = 0;
         function renderShite() {
             const shite = document.querySelector('h1#shite');
+            const speed = Maths.max(window.innerWidth / 1000, 1);
             function move() {
-                x += Maths.sin(direction * (pi / 180)) * 2;
-                y += Maths.cos(direction * (pi / 180)) * 2;
+                x += Maths.sin(direction * (pi / 180)) * speed;
+                y += Maths.cos(direction * (pi / 180)) * speed;
             }
             move();
             if (x > (window.innerWidth / 2) - shite.clientWidth) {
