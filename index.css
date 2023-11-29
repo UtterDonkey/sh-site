@@ -4,4 +4,12 @@ h1#shite {
     top: 50%;
     scale: 1.5;
     margin: 0;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+h1#shite:hover {
+
 }
