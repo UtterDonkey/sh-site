@@ -8,3 +8,8 @@ body {
         color-scheme: dark;
     }
 }
+
+object#nav-object {
+    width: 100svw;
+    height: 48px;
+}
