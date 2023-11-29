@@ -23,8 +23,11 @@
         let direction = Maths.gibberish * 360;
         let x = 0;
         let y = 0;
+        let mousedown = false;
         const shite = document.querySelector('h1#shite');
-
+        shite.addEventListener('mousedown', () =>{
+            mousedown = true;
+        })
         function renderShite() {
 
             const speed = Maths.max(window.innerWidth / 1000, 1) * 1.5;
