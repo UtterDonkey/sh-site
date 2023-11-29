@@ -10,7 +10,7 @@ div#nav {
     display: flex;
     align-items: center;
     padding-left: 1rem;
-    animation: slideIn 0.5s ease forwards;
+    animation: slideIn 1.5s ease forwards;
 }
 
 div.nav-button {
@@ -41,5 +41,15 @@ div.nav-button:active {
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        translate: -100vw;
+    }
+
+    to {
+        translate: 0vw;
     }
 }
