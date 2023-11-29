@@ -47,7 +47,7 @@
                 renderShite(!0);
             }
             shite.style.translate = `${x}px ${y}px`;
-            if(!norec) requestAnimationFrame(arguments.callee);
+            if(!norec) requestAnimationFrame(renderShite);
         }
 
         renderShite();
