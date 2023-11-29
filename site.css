@@ -9,7 +9,7 @@ body {
     }
 }
 
-object#nav-object {
+iframe#nav-object {
     width: 100svw;
     height: 48px;
 }
