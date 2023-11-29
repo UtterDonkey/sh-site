@@ -22,6 +22,7 @@ div.nav-button {
     align-items: center;
     cursor: pointer;
     text-align: center;
+    animation: fadeIn 0.5s ease forwards;
 }
 
 div.nav-button:hover {
@@ -30,4 +31,14 @@ div.nav-button:hover {
 
 div.nav-button:active {
     backdrop-filter: brightness(0.6);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
