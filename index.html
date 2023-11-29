@@ -36,7 +36,8 @@
             mousedown = false;
         });
         document.body.addEventListener('mousemove', (e) => {
-            mousedown = false;
+            mouse.clientX = e.clientX;
+            mouse.clientY = e.clientY;
         });
         function renderShite() {
 
