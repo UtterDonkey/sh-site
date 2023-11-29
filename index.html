@@ -24,8 +24,12 @@
             const maxY = window.innerHeight - shite.clientHeight;
             const randX = Math.random()*maxX + shite.clientWidth/2;
             const randY = Math.random()*maxY + shite.clientHeight/2;
-
+            Object.assign(shite.style, {
+                translate: `${randX}px ${randY}px`
+            });
         }
+
+        setInterval(randomShite, 2000);
         </script>
 </body>
 
