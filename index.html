@@ -24,11 +24,18 @@
         let x = 0;
         let y = 0;
         let mousedown = false;
+        const mouse = {
+            clientX: 0,
+            clientY: 0
+        }
         const shite = document.querySelector('h1#shite');
-        shite.addEventListener('mousedown', () =>{
+        shite.addEventListener('mousedown', () => {
             mousedown = true;
         });
-        document.body.addEventListener('mouseup', () =>{
+        document.body.addEventListener('mouseup', () => {
+            mousedown = false;
+        });
+        document.body.addEventListener('mousemove', (e) => {
             mousedown = false;
         });
         function renderShite() {
@@ -38,12 +45,12 @@
                 x += Maths.sin(direction * (pi / 180)) * speed / ((parseFloat(getComputedStyle(shite).scale) - 1) * 2);
                 y += Maths.cos(direction * (pi / 180)) * speed / ((parseFloat(getComputedStyle(shite).scale) - 1) * 2);
             }
-            if(mousedown){
+            if (mousedown) {
 
-            }else{
+            } else {
                 move();
             }
-            
+
             if (x > (window.innerWidth / 2) - shite.clientWidth) {
                 direction = direction - 90;
                 move();
